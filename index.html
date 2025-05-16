@@ -1,8 +1,1090 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>NDonalds</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechnoVision | Technology Solutions</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- AOS Animation Library -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #0b0f2c;
+        --secondary-color: #1a237e;
+        --accent-color: #5d34ff;
+        --text-color: #ffffff;
+        --highlight-color: #7e57c2;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text-color);
+        background-color: var(--primary-color);
+        overflow-x: hidden;
+      }
+
+      /* Scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--primary-color);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--accent-color);
+        border-radius: 10px;
+      }
+
+      /* Navigation */
+      .navbar {
+        background-color: rgba(11, 15, 44, 0.9) !important;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(93, 52, 255, 0.2);
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .navbar-brand span {
+        color: var(--accent-color);
+      }
+
+      .nav-link {
+        color: var(--text-color) !important;
+        margin: 0 10px;
+        font-weight: 500;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .nav-link:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--accent-color);
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover:before {
+        width: 100%;
+      }
+
+      /* Hero Section */
+      .hero {
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, #0b0f2c 0%, #1a237e 100%);
+      }
+
+      .hero-content {
+        z-index: 2;
+        position: relative;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, #ffffff, #5d34ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+      }
+
+      /* Star and Space Animation */
+      .space-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .stars {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 0;
+      }
+
+      .star {
+        position: absolute;
+        background-color: #ffffff;
+        border-radius: 50%;
+        animation: twinkle 5s infinite ease-in-out;
+      }
+
+      .planet {
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: inset 10px -10px 15px rgba(0, 0, 0, 0.5),
+          0 0 20px rgba(93, 52, 255, 0.8);
+        animation: rotate 60s infinite linear;
+        z-index: 1;
+      }
+
+      #planet1 {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(45deg, #5d34ff, #1a237e);
+        top: 15%;
+        right: 10%;
+      }
+
+      #planet2 {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(45deg, #7e57c2, #3949ab);
+        bottom: 15%;
+        left: 15%;
+        animation-duration: 40s;
+      }
+
+      #planet3 {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(45deg, #00b0ff, #1565c0);
+        top: 35%;
+        left: 5%;
+        animation-duration: 30s;
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.2;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg) translateX(100px) rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg) translateX(100px) rotate(-360deg);
+        }
+      }
+
+      /* Sections */
+      section {
+        padding: 100px 0;
+        position: relative;
+      }
+
+      .section-title {
+        margin-bottom: 60px;
+        position: relative;
+      }
+
+      .section-title h2 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        background: linear-gradient(to right, #ffffff, #5d34ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .section-title:after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--accent-color);
+      }
+
+      /* About Section */
+      .about {
+        background: linear-gradient(
+          to bottom,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+      }
+
+      .about-box {
+        background: rgba(26, 35, 126, 0.2);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        border: 1px solid rgba(93, 52, 255, 0.2);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .about-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(93, 52, 255, 0.5);
+      }
+
+      .about-icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: var(--accent-color);
+      }
+
+      /* Services Section */
+      .services {
+        background: linear-gradient(
+          to bottom,
+          var(--secondary-color),
+          var(--primary-color)
+        );
+      }
+
+      .service-card {
+        background: rgba(11, 15, 44, 0.6);
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(93, 52, 255, 0.2);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(93, 52, 255, 0.5);
+      }
+
+      .service-icon {
+        font-size: 3rem;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+      }
+
+      .service-card .card-body {
+        padding: 30px;
+      }
+
+      .service-card h3 {
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      /* Team Section */
+      .team {
+        background: linear-gradient(
+          to bottom,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+      }
+
+      .team-member {
+        background: rgba(11, 15, 44, 0.6);
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(93, 52, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .team-member:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(93, 52, 255, 0.5);
+      }
+
+      .team-member img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-bottom: 3px solid var(--accent-color);
+      }
+
+      .team-member .member-info {
+        padding: 20px;
+      }
+
+      .team-member h3 {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .team-member .position {
+        color: var(--accent-color);
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background: var(--accent-color);
+        color: var(--text-color);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 35px;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        background: var(--highlight-color);
+        transform: translateY(-3px);
+      }
+
+      /* Contact Section */
+      .contact {
+        background: linear-gradient(
+          to bottom,
+          var(--secondary-color),
+          var(--primary-color)
+        );
+      }
+
+      .contact-info {
+        background: rgba(11, 15, 44, 0.6);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(93, 52, 255, 0.2);
+        height: 100%;
+      }
+
+      .contact-icon {
+        font-size: 2rem;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+      }
+
+      .contact-form {
+        background: rgba(11, 15, 44, 0.6);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(93, 52, 255, 0.2);
+      }
+
+      .form-control {
+        background: rgba(26, 35, 126, 0.2);
+        border: 1px solid rgba(93, 52, 255, 0.3);
+        color: var(--text-color);
+        border-radius: 10px;
+        padding: 12px 15px;
+        margin-bottom: 20px;
+      }
+
+      .form-control:focus {
+        background: rgba(26, 35, 126, 0.4);
+        border: 1px solid var(--accent-color);
+        color: var(--text-color);
+        box-shadow: 0 0 10px rgba(93, 52, 255, 0.5);
+      }
+
+      .btn-primary {
+        background: var(--accent-color);
+        border: none;
+        border-radius: 10px;
+        padding: 12px 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: var(--highlight-color);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Footer */
+      footer {
+        background: var(--primary-color);
+        padding: 50px 0 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .footer-content {
+        margin-bottom: 30px;
+      }
+
+      .footer-logo {
+        font-weight: 700;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .footer-logo span {
+        color: var(--accent-color);
+      }
+
+      .footer-links h4 {
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-color);
+        padding-left: 5px;
+      }
+
+      .footer-social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(26, 35, 126, 0.3);
+        color: var(--text-color);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .footer-social a:hover {
+        background: var(--accent-color);
+        transform: translateY(-5px);
+      }
+
+      .copyright {
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+      }
+
+      @media (max-width: 991px) {
+        .hero h1 {
+          font-size: 3rem;
+        }
+
+        .hero p {
+          font-size: 1.2rem;
+        }
+
+        .planet {
+          transform: scale(0.7);
+        }
+
+        #planet1 {
+          right: 5%;
+        }
+
+        #planet3 {
+          left: 2%;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+
+        .planet {
+          transform: scale(0.5);
+        }
+
+        #planet2,
+        #planet3 {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
-    <center><h1>NDonalds</h1></center>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Techno<span>Vision</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex align-items-center">
+      <div class="space-bg">
+        <div class="stars"></div>
+        <div class="planet" id="planet1"></div>
+        <div class="planet" id="planet2"></div>
+        <div class="planet" id="planet3"></div>
+      </div>
+      <div class="container text-center hero-content">
+        <h1 data-aos="fade-up">INNOVATE. INTEGRATE. ELEVATE.</h1>
+        <p data-aos="fade-up" data-aos-delay="300">
+          Pioneering the future of technology with innovative solutions that
+          transform the way businesses operate in the digital universe.
+        </p>
+        <div data-aos="fade-up" data-aos-delay="600">
+          <a href="#about" class="btn btn-primary btn-lg me-3">Discover More</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>About Us</h2>
+          <p>Get to know our journey in the digital cosmos</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="about-box">
+              <div class="about-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3>Our Journey</h3>
+              <p>
+                TechnoVision was founded in 2015 by a group of visionary tech
+                enthusiasts who saw the potential of integrating cutting-edge
+                technology into everyday business operations. What started as a
+                small startup in a garage has now evolved into a leading tech
+                company with clients across multiple galaxies of industries.
+              </p>
+              <p>
+                Through continuous innovation and dedication to excellence,
+                we've navigated through the rapidly changing technology
+                landscape, always staying one step ahead of industry trends.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="about-box">
+              <div class="about-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3>Vision & Mission</h3>
+              <h5>Vision</h5>
+              <p>
+                To pioneer technological advancements that transcend boundaries
+                and create a more connected, efficient, and innovative digital
+                universe for businesses worldwide.
+              </p>
+              <h5>Mission</h5>
+              <p>
+                We are committed to delivering exceptional technology solutions
+                that empower businesses to achieve their full potential through
+                innovation, expertise, and unwavering dedication to client
+                success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>Our Services</h2>
+          <p>Cutting-edge solutions for your business needs</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+            <div class="service-card">
+              <div class="card-body text-center">
+                <div class="service-icon">
+                  <i class="fas fa-code"></i>
+                </div>
+                <h3>Software Development</h3>
+                <p>
+                  Custom software solutions designed to streamline your business
+                  processes, enhance productivity, and maximize efficiency with
+                  the latest technologies and methodologies.
+                </p>
+                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+            <div class="service-card">
+              <div class="card-body text-center">
+                <div class="service-icon">
+                  <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Cloud Computing</h3>
+                <p>
+                  Secure, scalable cloud solutions that provide your business
+                  with flexibility, cost-efficiency, and seamless data access
+                  from anywhere in the universe.
+                </p>
+                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="500">
+            <div class="service-card">
+              <div class="card-body text-center">
+                <div class="service-icon">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI & Machine Learning</h3>
+                <p>
+                  Advanced AI solutions that analyze data, identify patterns,
+                  and make intelligent predictions to drive better business
+                  decisions and automate complex processes.
+                </p>
+                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="700">
+            <div class="service-card">
+              <div class="card-body text-center">
+                <div class="service-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile App Development</h3>
+                <p>
+                  Innovative mobile applications that connect your business with
+                  customers on any device, providing seamless user experiences
+                  and driving engagement.
+                </p>
+                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="900">
+            <div class="service-card">
+              <div class="card-body text-center">
+                <div class="service-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Cybersecurity</h3>
+                <p>
+                  Comprehensive security solutions to protect your valuable data
+                  from cosmic threats, ensuring business continuity and
+                  maintaining customer trust.
+                </p>
+                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="1100">
+            <div class="service-card">
+              <div class="card-body text-center">
+                <div class="service-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Data Analytics</h3>
+                <p>
+                  Transform raw data into actionable insights with our advanced
+                  analytics solutions, helping you make data-driven decisions
+                  that propel business growth.
+                </p>
+                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+      <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>Our Team</h2>
+          <p>Meet the stellar minds behind our success</p>
+        </div>
+
+        <div class="row">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="team-member">
+              <img src="/api/placeholder/400/400" alt="CEO & Founder" />
+              <div class="member-info text-center">
+                <h3>Dr. Elara Vox</h3>
+                <div class="position">CEO & Founder</div>
+                <p>
+                  With over 15 years of experience in technology leadership, Dr.
+                  Vox drives our vision and strategic direction with
+                  unparalleled expertise and innovation.
+                </p>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div class="team-member">
+              <img src="/api/placeholder/400/400" alt="CTO" />
+              <div class="member-info text-center">
+                <h3>Nova Quantum</h3>
+                <div class="position">Chief Technology Officer</div>
+                <p>
+                  A visionary technologist with a passion for emerging
+                  technologies, Nova leads our technical strategy and ensures
+                  our solutions remain at the cutting edge.
+                </p>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+          >
+            <div class="team-member">
+              <img src="/api/placeholder/400/400" alt="Lead Developer" />
+              <div class="member-info text-center">
+                <h3>Orion Matrix</h3>
+                <div class="position">Lead Developer</div>
+                <p>
+                  With exceptional problem-solving skills and technical prowess,
+                  Orion leads our development team to create robust and scalable
+                  software solutions.
+                </p>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>Contact Us</h2>
+          <p>Reach out to us from any corner of the galaxy</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="contact-info">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <h3>Our Location</h3>
+                  <p>
+                    Nebula Tower, 123 Cosmic Boulevard<br />Digital District,
+                    Tech City 54321
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="contact-info">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <h3>Email Us</h3>
+                  <p>info@technovision.com<br />support@technovision.com</p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="contact-info">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <h3>Call Us</h3>
+                  <p>+1 234 567 8900<br />+1 987 654 3210</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="contact-form">
+              <form>
+                <div class="row">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Subject"
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      placeholder="Your Message"
+                    ></textarea>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row footer-content">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-logo">Techno<span>Vision</span></div>
+            <p>
+              Pioneering the future of technology with innovative solutions that
+              transform the way businesses operate in the digital universe.
+            </p>
+            <div class="footer-social mt-4">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6">
+            <div class="footer-links">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-links">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="#">Software Development</a></li>
+                <li><a href="#">Cloud Computing</a></li>
+                <li><a href="#">AI & Machine Learning</a></li>
+                <li><a href="#">Mobile App Development</a></li>
+                <li><a href="#">Cybersecurity</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-links">
+              <h4>Contact</h4>
+              <ul>
+                <li>
+                  <i class="fas fa-map-marker-alt me-2"></i> Nebula Tower, 123
+                  Cosmic Boulevard
+                </li>
+                <li><i class="fas fa-phone-alt me-2"></i> +1 234 567 8900</li>
+                <li>
+                  <i class="fas fa-envelope me-2"></i> info@technovision.com
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2025 TechnoVision. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap, jQuery and custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      // Initialize AOS animation
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false,
+      })
+
+      // Create stars
+      function createStars() {
+        const stars = document.querySelector(".stars")
+        const count = 200
+
+        for (let i = 0; i < count; i++) {
+          const star = document.createElement("div")
+          star.classList.add("star")
+
+          // Random position
+          const x = Math.floor(Math.random() * window.innerWidth)
+          const y = Math.floor(Math.random() * window.innerHeight)
+
+          // Random size
+          const size = Math.random() * 2
+
+          // Random animation delay
+          const delay = Math.random() * 5
+
+          star.style.left = `${x}px`
+          star.style.top = `${y}px`
+          star.style.width = `${size}px`
+          star.style.height = `${size}px`
+          star.style.animationDelay = `${delay}s`
+
+          stars.appendChild(star)
+        }
+      }
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault()
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          })
+        })
+      })
+
+      // Change navbar background on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar")
+        if (window.scrollY > 50) {
+          navbar.style.background = "rgba(11, 15, 44, 0.95)"
+          navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)"
+        } else {
+          navbar.style.background = "rgba(11, 15, 44, 0.9)"
+          navbar.style.boxShadow = "none"
+        }
+      })
+
+      // Call the function when page loads
+      window.addEventListener("load", createStars)
+    </script>
   </body>
 </html>
