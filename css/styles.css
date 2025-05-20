@@ -308,7 +308,7 @@ section {
 .team-member img {
   width: 100%;
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
   border-bottom: 3px solid var(--accent-color);
 }
 
@@ -392,6 +392,15 @@ section {
   border: 1px solid var(--accent-color);
   color: var(--text-color);
   box-shadow: 0 0 10px rgba(93, 52, 255, 0.5);
+}
+
+.form-control::placeholder {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+textarea {
+  resize: none;
 }
 
 .btn-primary {
