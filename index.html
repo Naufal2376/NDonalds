@@ -4,17 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noft Digital | Digital Cosmos</title>
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <!-- AOS Animation Library -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
       rel="stylesheet"
@@ -24,7 +21,7 @@
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
-      <div class="container">
+      <div class="container position-relative z-2">
         <a class="navbar-brand" href="#home">Noft<span>Digital</span></a>
         <button
           class="navbar-toggler"
@@ -67,8 +64,8 @@
         <div class="planet" id="planet2"></div>
         <div class="planet" id="planet3"></div>
       </div>
-      <div class="container text-center hero-content">
-        <h1 data-aos="fade-up">INNOVATE. INTEGRATE. ELEVATE.</h1>
+      <div class="container position-relative z-2 text-center hero-content">
+        <h1 id="typewriter" class="typewriter-text" data-aos="fade-up"></h1>
         <p data-aos="fade-up" data-aos-delay="300">
           Pioneering the future of technology with innovative solutions that
           transform the way businesses operate in the digital universe.
@@ -82,7 +79,7 @@
 
     <!-- About Section -->
     <section id="about" class="about">
-      <div class="container">
+      <div class="container position-relative z-2">
         <div class="section-title text-center" data-aos="fade-up">
           <h2>About Us</h2>
           <p>Get to know our journey in the digital cosmos</p>
@@ -96,16 +93,10 @@
               </div>
               <h3>Our Journey</h3>
               <p>
-                TechnoVision was founded in 2015 by a group of visionary tech
-                enthusiasts who saw the potential of integrating cutting-edge
-                technology into everyday business operations. What started as a
-                small startup in a garage has now evolved into a leading tech
-                company with clients across multiple galaxies of industries.
+                Noft Digital was founded in 2020 by a group of visionary tech enthusiasts who saw the potential of integrating cutting-edge technology into everyday business operations. What started as a small startup in a garage has now evolved into a leading tech company with clients across multiple galaxies of industries.
               </p>
               <p>
-                Through continuous innovation and dedication to excellence,
-                we've navigated through the rapidly changing technology
-                landscape, always staying one step ahead of industry trends.
+                Through continuous innovation and dedication to excellence, we've navigated through the rapidly changing technology landscape, always staying one step ahead of industry trends.
               </p>
             </div>
           </div>
@@ -118,17 +109,20 @@
               <h3>Vision & Mission</h3>
               <h5>Vision</h5>
               <p>
-                To pioneer technological advancements that transcend boundaries
-                and create a more connected, efficient, and innovative digital
-                universe for businesses worldwide.
+                To be a pioneering digital powerhouse that shapes the future of creative and immersive experiences—where innovation meets authenticity and drives sustainable growth for businesses in the digital era.
               </p>
               <h5>Mission</h5>
-              <p>
-                We are committed to delivering exceptional technology solutions
-                that empower businesses to achieve their full potential through
-                innovation, expertise, and unwavering dedication to client
-                success.
-              </p>
+              <ul>
+                <li>
+                  To craft cutting-edge digital products that are intuitive, impactful, and delightful.
+                </li>
+                <li>
+                  To empower individuals and businesses through smart design, meaningful storytelling, and emerging technologies.
+                </li>
+                <li>
+                  To build long-term partnerships by fostering a culture of curiosity, collaboration, and continuous learning.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -137,7 +131,7 @@
 
     <!-- Services Section -->
     <section id="services" class="services">
-      <div class="container">
+      <div class="container position-relative z-2">
         <div class="section-title text-center" data-aos="fade-up">
           <h2>Our Services</h2>
           <p>Cutting-edge solutions for your business needs</p>
@@ -156,7 +150,7 @@
                   processes, enhance productivity, and maximize efficiency with
                   the latest technologies and methodologies.
                 </p>
-                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+                <a href="#" class="btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#modalSoftwareDev">Learn More</a>
               </div>
             </div>
           </div>
@@ -173,7 +167,7 @@
                   with flexibility, cost-efficiency, and seamless data access
                   from anywhere in the universe.
                 </p>
-                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+                <a href="#" class="btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#modalCloudComputing">Learn More</a>
               </div>
             </div>
           </div>
@@ -190,7 +184,7 @@
                   and make intelligent predictions to drive better business
                   decisions and automate complex processes.
                 </p>
-                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+                <a href="#" class="btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#modalAI">Learn More</a>
               </div>
             </div>
           </div>
@@ -207,7 +201,7 @@
                   customers on any device, providing seamless user experiences
                   and driving engagement.
                 </p>
-                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+                <a href="#" class="btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#modalMobileApp">Learn More</a>
               </div>
             </div>
           </div>
@@ -224,7 +218,7 @@
                   from cosmic threats, ensuring business continuity and
                   maintaining customer trust.
                 </p>
-                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+                <a href="#" class="btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#modalCybersecurity">Learn More</a>
               </div>
             </div>
           </div>
@@ -241,7 +235,7 @@
                   analytics solutions, helping you make data-driven decisions
                   that propel business growth.
                 </p>
-                <a href="#" class="btn btn-outline-light mt-3">Learn More</a>
+                <a href="#" class="btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#modalDataAnalytics">Learn More</a>
               </div>
             </div>
           </div>
@@ -251,7 +245,7 @@
 
     <!-- Team Section -->
     <section id="team" class="team">
-      <div class="container">
+      <div class="container position-relative z-2">
         <div class="section-title text-center" data-aos="fade-up">
           <h2>Our Team</h2>
           <p>Meet the stellar minds behind our success</p>
@@ -259,96 +253,88 @@
 
         <div class="row">
           <div
-            class="col-lg-6 col-md-6"
+            class="col-lg-3 col-md-6"
             data-aos="zoom-in"
             data-aos-delay="100"
           >
             <div class="team-member">
               <img src="img/naufal.png" alt="CEO & Founder" />
               <div class="member-info text-center">
-                <h3>Dr. Naufal</h3>
+                <h3>Prof. Dr. Ir. H. M. Naufal Rafif Pratama, S.Kom., M.Kom., M.TI., MIT, Ph.D., D.Sc., CISA, CISSP, CEH, CNNA, AWS-CP, MCP, MBA(IT), MIEEE, AI/ML Specialist</h3>
                 <div class="position">CEO & Founder</div>
                 <p>
-                  With over 15 years of experience in technology leadership, Dr.
-                  Vox drives our vision and strategic direction with
-                  unparalleled expertise and innovation.
+                  With over 5 years of experience in technology leadership, Dr. Naufal drives our vision and strategic direction with unparalleled expertise and innovation.
                 </p>
                 <div class="social-links">
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://wa.me/6283146867066" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://github.com/Naufal2376" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/m-naufal-rafif-pratama-252aa72a0/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
           <div
-            class="col-lg-6 col-md-6"
+            class="col-lg-3 col-md-6"
             data-aos="zoom-in"
             data-aos-delay="300"
           >
             <div class="team-member">
               <img src="img/zulfah.png" alt="CTO" />
               <div class="member-info text-center">
-                <h3>Nova Quantum</h3>
+                <h3>Mrs. Zulfah</h3>
                 <div class="position">Chief Technology Officer</div>
                 <p>
-                  A visionary technologist with a passion for emerging
-                  technologies, Nova leads our technical strategy and ensures
-                  our solutions remain at the cutting edge.
+                  A visionary technologist with a passion for emerging technologies, zulf leads our technical strategy and ensures our solutions remain at the cutting edge.
                 </p>
                 <div class="social-links">
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-github"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://wa.me/qr/OLGEGFBFVLQYP1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://github.com/zulf444h" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/zulfah-shabb-b614a0357" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
           <div
-            class="col-lg-6 col-md-6"
+            class="col-lg-3 col-md-6"
             data-aos="zoom-in"
             data-aos-delay="300"
           >
             <div class="team-member">
-              <img src="img/alya.png" alt="CTO" />
+              <img src="img/alya.png" alt="CM" />
               <div class="member-info text-center">
-                <h3>Nova Quantum</h3>
-                <div class="position">Chief Technology Officer</div>
+                <h3>Lady Alya</h3>
+                <div class="position">Chief Marketing</div>
                 <p>
-                  A visionary technologist with a passion for emerging
-                  technologies, Nova leads our technical strategy and ensures
-                  our solutions remain at the cutting edge.
+                  A visionary technologist with passion building user-centered, visually appealing, and high-performance digital experiences, Alya leads the creative teams. 
                 </p>
                 <div class="social-links">
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-github"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://wa.me/6282283407188" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://github.com/alyahilwa" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/alya-hilwa-amalia" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
           <div
-            class="col-lg-6 col-md-6"
+            class="col-lg-3 col-md-6"
             data-aos="zoom-in"
             data-aos-delay="500"
           >
             <div class="team-member">
               <img src="img/fakhri.png" alt="Lead Developer" />
               <div class="member-info text-center">
-                <h3>Orion Matrix</h3>
+                <h3>Mr. Fakhri</h3>
                 <div class="position">Lead Developer</div>
                 <p>
-                  With exceptional problem-solving skills and technical prowess,
-                  Orion leads our development team to create robust and scalable
-                  software solutions.
+                  With exceptional problem-solving skills and technical prowess, Fakhri leads our development team to create robust and scalable software solutions
                 </p>
                 <div class="social-links">
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-github"></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
               </div>
             </div>
@@ -359,7 +345,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-      <div class="container">
+      <div class="container position-relative z-2">
         <div class="section-title text-center" data-aos="fade-up">
           <h2>Contact Us</h2>
           <p>Reach out to us from any corner of the galaxy</p>
@@ -375,8 +361,7 @@
                   </div>
                   <h3>Our Location</h3>
                   <p>
-                    Nebula Tower, 123 Cosmic Boulevard<br />Digital District,
-                    Tech City 54321
+                    Nebula Tower, 266 Diagon Alley<br />Moon City 616
                   </p>
                 </div>
               </div>
@@ -397,7 +382,7 @@
                     <i class="fas fa-phone-alt"></i>
                   </div>
                   <h3>Call Us</h3>
-                  <p>+1 234 567 8900<br />+1 987 654 3210</p>
+                  <p>+44 2006 4319<br />+1 987 654 3210</p>
                 </div>
               </div>
             </div>
@@ -405,43 +390,26 @@
 
           <div class="col-lg-7" data-aos="fade-left">
             <div class="contact-form">
-              <form>
+              <form id="contact-form">
                 <div class="row">
                   <div class="col-md-6">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Your Name"
-                    />
+                    <input type="text" name="user_name" class="form-control" placeholder="Your Name" required />
                   </div>
                   <div class="col-md-6">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Your Email"
-                    />
+                    <input type="email" name="user_email" class="form-control" placeholder="Your Email" required />
                   </div>
                   <div class="col-md-12">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Subject"
-                    />
+                    <input type="text" name="subject" class="form-control" placeholder="Subject" required />
                   </div>
                   <div class="col-md-12">
-                    <textarea
-                      class="form-control"
-                      rows="5"
-                      placeholder="Your Message"
-                    ></textarea>
+                    <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
                   </div>
                   <div class="col-md-12 text-center">
-                    <button type="submit" class="btn btn-primary">
-                      Send Message
-                    </button>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                   </div>
                 </div>
               </form>
+              
             </div>
           </div>
         </div>
@@ -450,7 +418,7 @@
 
     <!-- Footer -->
     <footer>
-      <div class="container">
+      <div class="container position-relative z-2">
         <div class="row footer-content">
           <div class="col-lg-4 col-md-6">
             <div class="footer-logo">Noft<span>Digital</span></div>
@@ -515,10 +483,232 @@
       </div>
     </footer>
 
-    <!-- Bootstrap, jQuery and custom JS -->
+    <!-- Service Modals -->
+    <div id="modals-container">
+      <!-- Software Development Modal -->
+      <div class="modal fade" id="modalSoftwareDev" tabindex="-1" aria-labelledby="modalSoftwareDevLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content bg-dark text-light rounded-4 border border-primary shadow-lg">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-gradient" id="modalSoftwareDevLabel">
+                <i class="fas fa-code me-2"></i> Intelligent Systems Engineering
+              </h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Solusi perangkat lunak adaptif yang dirancang khusus untuk skala lokal hingga galaksi.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-cogs text-primary me-2"></i> Modular Architecture (Monolith ↔ Microservices)</li>
+                <li><i class="fas fa-sync-alt text-primary me-2"></i> CI/CD Automations</li>
+                <li><i class="fas fa-plug text-primary me-2"></i> API & WebSocket-First Integration</li>
+              </ul>
+              <h6 class="mt-4">Tech Used</h6>
+              <div class="d-flex flex-wrap gap-3">
+                <span class="badge bg-secondary"><i class="fab fa-node-js me-1"></i> Node.js</span>
+                <span class="badge bg-secondary"><i class="fab fa-python me-1"></i> Django</span>
+                <span class="badge bg-secondary"><i class="fab fa-react me-1"></i> React</span>
+                <span class="badge bg-secondary"><i class="fas fa-database me-1"></i> SQL/NoSQL</span>
+                <span class="badge bg-secondary"><i class="fab fa-docker me-1"></i> Docker</span>
+              </div>
+            </div>
+            <div class="modal-footer border-0 justify-content-between">
+              <a href="https://wa.me/6283146867066?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Software%20Development" target="_blank" class="btn btn-success">
+                <i class="fab fa-whatsapp me-1"></i> Chat via WhatsApp
+              </a>
+              <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cloud Computing Modal -->
+      <div class="modal fade" id="modalCloudComputing" tabindex="-1" aria-labelledby="modalCloudComputingLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content bg-dark text-light rounded-4 border border-info shadow-lg">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-gradient" id="modalCloudComputingLabel">
+                <i class="fas fa-cloud me-2"></i> Cloud Infrastructure & Orchestration
+              </h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Solusi cloud hibrida dan native untuk operasional fleksibel dan selalu tersedia.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-network-wired text-info me-2"></i> Multi-region Deployments</li>
+                <li><i class="fas fa-sitemap text-info me-2"></i> Infrastructure as Code (IaC)</li>
+                <li><i class="fas fa-cloud-upload-alt text-info me-2"></i> Seamless Migration & Scaling</li>
+              </ul>
+              <h6 class="mt-4">Tech Used</h6>
+              <div class="d-flex flex-wrap gap-3">
+                <span class="badge bg-secondary"><i class="fab fa-aws me-1"></i> AWS</span>
+                <span class="badge bg-secondary"><i class="fab fa-google me-1"></i> GCP</span>
+                <span class="badge bg-secondary"><i class="fab fa-microsoft me-1"></i> Azure</span>
+                <span class="badge bg-secondary"><i class="fas fa-code-branch me-1"></i> Terraform</span>
+                <span class="badge bg-secondary"><i class="fab fa-kubernetes me-1"></i> Kubernetes</span>
+              </div>
+            </div>
+            <div class="modal-footer border-0 justify-content-between">
+              <a href="https://wa.me/6283146867066?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Cloud%20Computing" target="_blank" class="btn btn-success">
+                <i class="fab fa-whatsapp me-1"></i> Chat via WhatsApp
+              </a>
+              <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI & Machine Learning Modal -->
+      <div class="modal fade" id="modalAI" tabindex="-1" aria-labelledby="modalAILabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content bg-dark text-light rounded-4 border border-warning shadow-lg">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-gradient" id="modalAILabel">
+                <i class="fas fa-robot me-2"></i> AI & Machine Learning
+              </h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Automasi dan kecerdasan buatan untuk mempercepat keputusan dan efisiensi operasional.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-brain text-warning me-2"></i> Predictive Modeling & Forecasting</li>
+                <li><i class="fas fa-language text-warning me-2"></i> NLP & Computer Vision</li>
+                <li><i class="fas fa-sync text-warning me-2"></i> AutoML Pipelines</li>
+              </ul>
+              <h6 class="mt-4">Tech Used</h6>
+              <div class="d-flex flex-wrap gap-3">
+                <span class="badge bg-secondary"><i class="fab fa-python me-1"></i> Python</span>
+                <span class="badge bg-secondary"><i class="fas fa-brain me-1"></i> TensorFlow</span>
+                <span class="badge bg-secondary"><i class="fas fa-brain me-1"></i> PyTorch</span>
+                <span class="badge bg-secondary"><i class="fas fa-chart-line me-1"></i> Scikit-learn</span>
+              </div>
+            </div>
+            <div class="modal-footer border-0 justify-content-between">
+              <a href="https://wa.me/6283146867066?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20AI%20%26%20Machine%20Learning" target="_blank" class="btn btn-success">
+                <i class="fab fa-whatsapp me-1"></i> Chat via WhatsApp
+              </a>
+              <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile App Development Modal -->
+      <div class="modal fade" id="modalMobileApp" tabindex="-1" aria-labelledby="modalMobileAppLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content bg-dark text-light rounded-4 border border-success shadow-lg">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-gradient" id="modalMobileAppLabel">
+                <i class="fas fa-mobile-alt me-2"></i> Mobile Experience Engineering
+              </h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Aplikasi mobile responsif dan interaktif untuk konektivitas dan konversi maksimal.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-mobile text-success me-2"></i> Native & Hybrid Apps</li>
+                <li><i class="fas fa-user-circle text-success me-2"></i> UX & Gesture-Driven Design</li>
+                <li><i class="fas fa-sync-alt text-success me-2"></i> OTA Updates</li>
+              </ul>
+              <h6 class="mt-4">Tech Used</h6>
+              <div class="d-flex flex-wrap gap-3">
+                <span class="badge bg-secondary"><i class="fab fa-android me-1"></i> Android</span>
+                <span class="badge bg-secondary"><i class="fab fa-apple me-1"></i> iOS</span>
+                <span class="badge bg-secondary"><i class="fab fa-react me-1"></i> React Native</span>
+                <span class="badge bg-secondary"><i class="fab fa-flutter me-1"></i> Flutter</span>
+              </div>
+            </div>
+            <div class="modal-footer border-0 justify-content-between">
+              <a href="https://wa.me/6283146867066?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Mobile%20App%20Development" target="_blank" class="btn btn-success">
+                <i class="fab fa-whatsapp me-1"></i> Chat via WhatsApp
+              </a>
+              <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cybersecurity Modal -->
+      <div class="modal fade" id="modalCybersecurity" tabindex="-1" aria-labelledby="modalCybersecurityLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content bg-dark text-light rounded-4 border border-danger shadow-lg">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-gradient" id="modalCybersecurityLabel">
+                <i class="fas fa-shield-alt me-2"></i> Cybersecurity Operations
+              </h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Proteksi sistem Anda dari ancaman digital dengan strategi keamanan berlapis dan real-time response.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-lock text-danger me-2"></i> Threat Intelligence & Penetration Testing</li>
+                <li><i class="fas fa-user-shield text-danger me-2"></i> Zero Trust Architecture</li>
+                <li><i class="fas fa-clipboard-check text-danger me-2"></i> Compliance (ISO 27001, GDPR)</li>
+              </ul>
+              <h6 class="mt-4">Tech Used</h6>
+              <div class="d-flex flex-wrap gap-3">
+                <span class="badge bg-secondary"><i class="fas fa-search me-1"></i> Nessus</span>
+                <span class="badge bg-secondary"><i class="fas fa-bug me-1"></i> Metasploit</span>
+                <span class="badge bg-secondary"><i class="fab fa-linux me-1"></i> Kali Linux</span>
+                <span class="badge bg-secondary"><i class="fas fa-user-secret me-1"></i> OSSEC</span>
+              </div>
+            </div>
+            <div class="modal-footer border-0 justify-content-between">
+              <a href="https://wa.me/6283146867066" target="_blank" class="btn btn-success">
+                <i class="fab fa-whatsapp me-1"></i> Chat via WhatsApp
+              </a>
+              <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Analytics Modal -->
+      <div class="modal fade" id="modalDataAnalytics" tabindex="-1" aria-labelledby="modalDataAnalyticsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content bg-dark text-light rounded-4 border border-light shadow-lg">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-gradient" id="modalDataAnalyticsLabel">
+                <i class="fas fa-chart-line me-2"></i> Data-Driven Intelligence
+              </h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Ubah data menjadi wawasan strategis untuk pengambilan keputusan berbasis fakta.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-chart-pie text-light me-2"></i> Dashboard Interaktif & KPI Monitoring</li>
+                <li><i class="fas fa-database text-light me-2"></i> ETL & Data Warehouse Pipelines</li>
+                <li><i class="fas fa-project-diagram text-light me-2"></i> Decision Intelligence & Scenario Simulation</li>
+              </ul>
+              <h6 class="mt-4">Tech Used</h6>
+              <div class="d-flex flex-wrap gap-3">
+                <span class="badge bg-secondary"><i class="fab fa-python me-1"></i> Pandas</span>
+                <span class="badge bg-secondary"><i class="fas fa-database me-1"></i> SQL</span>
+                <span class="badge bg-secondary"><i class="fas fa-chart-bar me-1"></i> Power BI</span>
+                <span class="badge bg-secondary"><i class="fab fa-chart-area me-1"></i> Tableau</span>
+              </div>
+            </div>
+            <div class="modal-footer border-0 justify-content-between">
+              <a href="https://wa.me/6283146867066" target="_blank" class="btn btn-success">
+                <i class="fab fa-whatsapp me-1"></i> Chat via WhatsApp
+              </a>
+              <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+      (function () {
+        emailjs.init("vGYcKfJTSyOY6DIjm");
+      })();
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>
